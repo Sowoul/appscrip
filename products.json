@@ -1,0 +1,23 @@
+[
+  {
+    "id" : 1,
+    "name": "Mouse",
+    "description": "Wireless mouse with lef.",
+    "price": 1200,
+    "stock_quantity": 120
+  },
+  {
+    "id" : 2,
+    "name": "Keyboard",
+    "description": "RGB mechanical keyboard",
+    "price": 1600,
+    "stock_quantity": 75
+  },
+  {
+    "id" : 3,
+    "name": "Monitor",
+    "description": "Ultra HD 4K LED monitor.",
+    "price": 8000,
+    "stock_quantity": 30
+  }
+]
