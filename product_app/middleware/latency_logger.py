@@ -8,6 +8,6 @@ class LatencyLoggerMiddleware:
     def __call__(self, request):
         start = time.time()
         response = self.get_response(request)
-        duration = (time.time() - start) * 1000  # ms
+        duration = (time.time() - start) * 1000
         logger.info(f"[LatencyLogger] {request.method} {request.path} took {int(duration)}ms")
         return response

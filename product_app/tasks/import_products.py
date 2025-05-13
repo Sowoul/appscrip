@@ -6,13 +6,16 @@ def import_products():
         with open('products.json') as f:
             data = json.load(f)
         for item in data:
-            Product.objects.get_or_create(
-                id=item['id'],
-                name=item['name'],
-                description=item['description'],
-                price=item['price'],
-                stock_quantity=item['stock_quantity'] if 'stock_quantity' in item else 0
-            )
+            try:
+                Product.objects.create(
+                    id=item['id'],
+                    name=item['name'],
+                    description=item['description'],
+                    price=item['price'],
+                    stock_quantity=item['stock_quantity'] if 'stock_quantity' in item else 0
+                )
+            except Exception as e:
+                print(f"Error in {item.get("name","Product")}: {e}. SKIPPING")
 
         print("Products imported successfully!")
 
