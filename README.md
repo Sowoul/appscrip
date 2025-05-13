@@ -3,6 +3,7 @@ For testing I have made a sample products.json, with some sample computer parts 
 To run it, simply run the command ```python manage.py runserver```, I have already performed the migrations, so you dont have to first migrate. To use the task to import the data, we use ```python manage.py import_products```, this imports all the data from the products.json file
 
 ## UPDATE:
+First run ```pip install -r requirements.txt``` to install the required packages.
 I have made it so that there are no more trailing slashes, and when the list is empty, it returns 204 instead of 404 by overriding the get method, i have also written a couple of tests, which can be run using ```python manage.py test```
 I have also added a new command to erase all the products from the database, to make it easier to test with custom data, to run which, just do ```python manage.py clear_products```
 I have tried to make it so that the data formats are exactly what were told in the file.
